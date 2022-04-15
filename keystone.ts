@@ -4,10 +4,7 @@ import { lists } from "./schema";
 
 export default config(
   withAuth({
-    db: {
-      provider: "postgresql",
-      url: process.env.DB as string,
-    },
+    db: { provider: "sqlite", url: "file:./app.db" },
     experimental: {
       generateNextGraphqlAPI: true,
       generateNodeAPI: true,

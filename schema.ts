@@ -1,11 +1,10 @@
 import { Lists } from ".keystone/types";
 import { list } from "@keystone-6/core";
 import {
+  checkbox,
   password,
   relationship,
   text,
-  integer,
-  checkbox,
 } from "@keystone-6/core/fields";
 
 export const lists: Lists = {
@@ -37,6 +36,15 @@ export const lists: Lists = {
     },
     ui: {
       labelField: "lastName",
+      listView: {
+        initialColumns: [
+          "lastName",
+          "firstName",
+          "phone",
+          "badgeIsCheckedIn",
+          "department",
+        ],
+      },
     },
   }),
   Department: list({
