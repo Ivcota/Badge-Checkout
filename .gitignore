@@ -36,4 +36,5 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 app.db
+backupDb.db
 .env
